@@ -2,9 +2,17 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
-  runApp(const MainApp());
+// void main() {
+//   runApp(const MainApp());
+// }
+Future<void> main() async {
+  await Supabase.initialize(
+    url: 'https://hcipjhebepaaeqxordxj.supabase.co',
+    publishableKey: 'sb_publishable_nqIJ_feh-ZZ-KTqXMktykQ_vaP1uY0K',
+  );
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -66,7 +74,6 @@ class MainApp extends StatelessWidget {
         //     ],
         //   ),
         // )
-
         body: Container(
           child: LayoutGrid(
             areas: '''
@@ -75,9 +82,9 @@ class MainApp extends StatelessWidget {
               gacha   gacha   fight   fight   fight
               quests  quests  quests  quests  param
             ''',
-            columnSizes: [1.fr,1.fr,1.fr,1.fr,1.fr],
-            rowSizes: [1.fr,1.fr,1.fr,1.fr],
-            
+            columnSizes: [1.fr, 1.fr, 1.fr, 1.fr, 1.fr],
+            rowSizes: [1.fr, 1.fr, 1.fr, 1.fr],
+
             children: [
               new Container(
                 child: Text('Gacha'),
@@ -111,7 +118,7 @@ class MainApp extends StatelessWidget {
               ).inGridArea('param'),
             ],
           ),
-        )
+        ),
       ),
     );
   }

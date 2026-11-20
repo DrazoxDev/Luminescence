@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_layout_grid: ^2.0.8
+  supabase_flutter: ^2.18.3
 
 dev_dependencies:
   flutter_test:
