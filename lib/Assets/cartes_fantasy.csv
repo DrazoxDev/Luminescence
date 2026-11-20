@@ -1,0 +1,16 @@
+﻿name,attack,life,rarity,description
+Loup des Brumes,120,300,1,Un loup agile qui rôde dans les forêts embrumées.
+Gobelin Éclaireur,180,220,1,"Petit mais rapide, il attaque avant que l'ennemi ne réagisse."
+Gardien de Pierre,90,650,2,Un colosse de pierre qui protège les anciennes ruines.
+Mage des Cendres,260,350,2,Manipule les flammes grises pour consumer ses adversaires.
+Chevalier du Crépuscule,340,600,3,"Un chevalier lié à une magie obscure, redoutable au combat."
+Harpyie des Tempêtes,420,380,3,Ses ailes déclenchent des rafales capables de renverser ses ennemis.
+Dragon Rouge,700,900,4,Un dragon ancien dont le souffle embrase des vallées entières.
+Reine Spectrale,550,750,4,"Une souveraine morte depuis des siècles, revenue commander les ombres."
+"Fenrir, Dévoreur",950,1200,5,La bête prophétique dont les chaînes ne pourront retenir la puissance.
+Archange de l'Aube,850,1500,5,Un être lumineux qui descend du ciel pour protéger les mondes menacés.
+Assassin Silencieux,500,280,2,Un maître de l'ombre qui frappe avec précision et disparaît aussitôt.
+Troll des Marais,240,800,2,Une créature massive qui régénère ses blessures dans les eaux sombres.
+Démon des Abysses,650,500,4,"Un démon venu des profondeurs, nourri par la peur de ses victimes."
+Phénix Éternel,600,700,5,Il renaît de ses cendres à chaque fois que sa flamme s'éteint.
+Rôdeur Sylvestre,300,450,2,Un protecteur des bois qui ne manque jamais sa cible.
