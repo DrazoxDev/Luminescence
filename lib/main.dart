@@ -2,7 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
+import 'package:luminescence/AppStyle.dart';
 import 'package:luminescence/Collections/CollectionView.dart';
+import 'package:luminescence/Combat/FightFirstPage.dart';
+import 'package:luminescence/Gacha/GachaPage.dart';
+import 'package:luminescence/Missions/QuestsPage.dart';
+import 'package:luminescence/User/ProfilPage.dart';
+import 'package:luminescence/User/SettingsPage.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 // void main() {
@@ -26,6 +32,13 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/cards': (context) => Collectionview(),
+        '/profil': (context) => Profilpage(),
+        '/gacha': (context) => Gachapage(),
+        '/settings': (context) => Settingspage(),
+        '/quests': (context) => Questspage(),
+        '/fights': (context) => Fightfirstpage(),
+
+
       },
     );
   }
@@ -58,10 +71,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.green,
                   ),
-                  child: Text('Invoquer une carte'),
+                  child: Text('Invoquer une carte', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
-                  print("Tapped on Cards");
+                  Navigator.pushNamed(context, '/gacha');
+                  print("Tapped on Gacha");
                 },
               ).inGridArea('gacha'),
               InkWell(
@@ -71,9 +85,10 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.yellow,
                   ),
-                  child: Text('Participer à un combat'),
+                  child: Text('Participer à un combat', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
+                  Navigator.pushNamed(context, '/fights');
                   print("Tapped on Fight");
                 },
               ).inGridArea('fight'),
@@ -85,9 +100,10 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.red,
                   ),
-                  child: Text('Visionner les missions'),
+                  child: Text('Visionner les missions', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
+                  Navigator.pushNamed(context, '/quests');
                   print("Tapped on Quest");
                 },
               ).inGridArea('quests'),
@@ -99,11 +115,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.purple,
                   ),
-                  child: Text('Voir sa collection de carte'),
+                  child: Text('Voir sa collection de carte', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/cards');
-                  print("Tapped on Gacha");
+                  print("Tapped on Cards");
                 },
               ).inGridArea('cards'),
 
@@ -114,9 +130,10 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blue,
                   ),
-                  child: Text('Consulter son profil'),
+                  child: Text('Consulter son profil', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
+                  Navigator.pushNamed(context, '/profil');
                   print("Tapped on Profil");
                 },
               ).inGridArea('profil'),
@@ -128,9 +145,10 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.pink,
                   ),
-                  child: Text('Consulter ses paramètres'),
+                  child: Text('Consulter ses paramètres', style: Appstyle.menuTitre),
                 ),
                 onTap: () {
+                  Navigator.pushNamed(context, '/settings');
                   print("Tapped on Settings");
                 },
               ).inGridArea('param'),
